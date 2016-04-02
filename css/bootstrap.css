@@ -6242,7 +6242,7 @@ button.close {
 }
 .carousel-inner {
   position: relative;
-  width: 100%;
+  width: 20%;
   overflow: hidden;
 }
 .carousel-inner > .item {
@@ -6299,7 +6299,6 @@ button.close {
 .carousel-inner > .prev {
   position: absolute;
   top: 0;
-  width: 100%;
 }
 .carousel-inner > .next {
   left: 100%;

@@ -1,15 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
 
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Business Casual - Start Bootstrap Theme</title>
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+
+<script src="js/jquery.js" > </script>
+<script>
+
+
+$(document).ready(function() {
+    jQuery.get("bio.txt", undefined, function(text) {
+
+        var lines = text.trim().split(/\s*[\r\n]+\s*/g);
+
+        lines.forEach(function(elem, index, arr) {
+          var $bio = $('#bio');
+          $('<p>', {
+            id : 'paragraph' + index,
+            html : elem
+          }).appendTo($bio);
+        });
+    }, "html");
+
+  }
+);
+
+
+</script>
+
+
+    <title>Dillon Hicks</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -32,8 +60,8 @@
 
 <body>
 
-    <div class="brand">Business Casual</div>
-    <div class="address-bar">3481 Melrose Place | Beverly Hills, CA 90210 | 123.456.7890</div>
+    <div class="brand">Dillon Hicks</div>
+    <div class="address-bar">Software Engineer | Generalist<br> Seattle, WA</div>
 
     <!-- Navigation -->
     <nav class="navbar navbar-default" role="navigation">
@@ -47,19 +75,16 @@
                     <span class="icon-bar"></span>
                 </button>
                 <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
-                <a class="navbar-brand" href="index.html">Business Casual</a>
+                <a class="navbar-brand" href="index.html">Dillon Hicks</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="index.html">Home</a>
+                        <a href="index.html">Dillon</a>
                     </li>
                     <li>
-                        <a href="about.html">About</a>
-                    </li>
-                    <li>
-                        <a href="blog.html">Blog</a>
+                        <a href="dillonhicks-resume.pdf">Résumé</a>
                     </li>
                     <li>
                         <a href="contact.html">Contact</a>
@@ -73,9 +98,16 @@
 
     <div class="container">
 
-        <div class="row">
+
             <div class="box">
-                <div class="col-lg-12 text-center">
+              <hr>
+              <h2 class="intro-text text-center">
+                  <strong>Dillon Hicks</strong> - A Brief History
+              </h2>
+              <hr>
+        <div class="row">
+
+                    <div class ="col-sm-3 col-md-3 col-lg-3">
                     <div id="carousel-example-generic" class="carousel slide">
                         <!-- Indicators -->
                         <ol class="carousel-indicators hidden-xs">
@@ -87,13 +119,13 @@
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner">
                             <div class="item active">
-                                <img class="img-responsive img-full" src="img/slide-1.jpg" alt="">
+                              <img class="img-responsive img-border img-left" src="img/slide-1-andes.jpg" alt="">
                             </div>
                             <div class="item">
-                                <img class="img-responsive img-full" src="img/slide-2.jpg" alt="">
+                              <img class="img-responsive img-border img-left" src="img/slide-2-desk.jpg" alt="">
                             </div>
                             <div class="item">
-                                <img class="img-responsive img-full" src="img/slide-3.jpg" alt="">
+                              <img class="img-responsive img-border img-left" src="img/slide-3-me.jpg" alt="">
                             </div>
                         </div>
 
@@ -105,51 +137,33 @@
                             <span class="icon-next"></span>
                         </a>
                     </div>
-                    <h2 class="brand-before">
-                        <small>Welcome to</small>
-                    </h2>
-                    <h1 class="brand-name">Business Casual</h1>
-                    <hr class="tagline-divider">
-                    <h2>
-                        <small>By
-                            <strong>Start Bootstrap</strong>
-                        </small>
-                    </h2>
-                </div>
-            </div>
-        </div>
+                  </div>
 
-        <div class="row">
-            <div class="box">
-                <div class="col-lg-12">
-                    <hr>
-                    <h2 class="intro-text text-center">Build a website
-                        <strong>worth visiting</strong>
-                    </h2>
-                    <hr>
-                    <img class="img-responsive img-border img-left" src="img/intro-pic.jpg" alt="">
+                  <div class ="col-sm-12 col-md-9 col-lg-9">
                     <hr class="visible-xs">
-                    <p>The boxes used in this template are nested inbetween a normal Bootstrap row and the start of your column layout. The boxes will be full-width boxes, so if you want to make them smaller then you will need to customize.</p>
-                    <p>A huge thanks to <a href="http://join.deathtothestockphoto.com/" target="_blank">Death to the Stock Photo</a> for allowing us to use the beautiful photos that make this template really come to life. When using this template, make sure your photos are decent. Also make sure that the file size on your photos is kept to a minumum to keep load times to a minimum.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat diam quis nisl vestibulum dignissim. In hac habitasse platea dictumst. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                    <div id="bio">
+                    </div>
+                    <br />
                 </div>
             </div>
-        </div>
+            <div class="row">
+              <div class="col-lg-5 col-md-5 col-sm-5" > </div>
+              <div class="col-lg-2 col-md-2 col-sm-2">
+                <p>
+                  <a href="https://github.com/vengefuldrx">
+                    <img src="img/just-vector-1.0/svg/github_alt.svg" width="30" height="30" border="0" alt="View Dillon Hicks's profile on Github">
+                  </a>
+                  <a href="">
+                    <img src="img/just-vector-1.0/svg/facebook.svg" width="30" height="30" border="0" alt="View Dillon Hicks's profile on Facebook">
+                  </a>
+                  <a href="https://www.linkedin.com/pub/dillon-hicks/12/5a1/980">
+                  <img src="img/just-vector-1.0/svg/linkedin.svg" width="30" height="30" border="0" alt="View Dillon Hicks's profile on LinkedIn">
+                </a>
 
-        <div class="row">
-            <div class="box">
-                <div class="col-lg-12">
-                    <hr>
-                    <h2 class="intro-text text-center">Beautiful boxes
-                        <strong>to showcase your content</strong>
-                    </h2>
-                    <hr>
-                    <p>Use as many boxes as you like, and put anything you want in them! They are great for just about anything, the sky's the limit!</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat diam quis nisl vestibulum dignissim. In hac habitasse platea dictumst. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-                </div>
+              </p>
+                <div class="col-lg-5 col-md-5 col-sm-5"> </div>
+              </div>
             </div>
-        </div>
-
     </div>
     <!-- /.container -->
 
@@ -157,24 +171,27 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <p>Copyright &copy; Your Website 2014</p>
+                  <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    <br />
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
+                    <br />Except where otherwise noted, the media content of this work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/dillonhicks.js" type="script/javascript"> </script>
 
     <!-- Script to Activate the Carousel -->
     <script>
     $('.carousel').carousel({
         interval: 5000 //changes the speed
-    })
-    </script>
+    });
+
+</script>
 
 </body>
 
