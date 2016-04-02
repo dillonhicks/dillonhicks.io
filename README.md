@@ -10,5 +10,3 @@ This is the code for my personal static site. Huzzah.
 ## Licenses
 * The website code is released under the [MIT](https://github.com/vengefuldrx/dillonhicks.io/blob/master/LICENSE) license.
 * Unless otherwise specified, the other media content is my original content and is released under the [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/).
-
-Copyright 2013-2016 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-business-casual/blob/gh-pages/LICENSE) license.
