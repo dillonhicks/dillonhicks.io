@@ -1,0 +1,13 @@
+Hey, I'm Dillon.
+
+<i>What do I do?</i> I guess I am a Software Engineer? Maybe I am a Scientist? Either way I would say my <b>tl;dr</b> is: "loves learning how things work and solving problems."
+
+I grew up in Lawrence, a small college town in eastern Kansas. My first foray into programming was back in 2004 learning Visual Basic. The culmination of my efforts led to my first complete program, <i>Hangman</i>. A year later I was marching headlong into game programming. I ran the gamut from RPGs for my TI-83 to learning DirectX so I could make 3D games.
+
+Tired of Midwestern winters, I attended Arizona State University to pursue a degree in Computer Systems Engineering for a couple of memorable and sunbaked years. In 2008, I returned back to my hometown to go to the University of Kansas for Computer Science. I have always loved the physical sciences and while at KU the natural progression happened; I ended up studying Physics too.
+
+Somewhere between then and now, I spent the better part of 4 years between various research projects. The noteworthy two are: 1) Attempting to create a sentiment and relevance engine for legal documents and 2) hacking the <a href=\"https://www.kernel.org/\">Linux Kernel</a> by generalizing the scheduler to allow for pluggable scheduling modules.
+
+In 2013, I landed a pretty sweet gig at Amazon Web Services. So I packed up shop, moved to Seattle, and now I call the beautiful Pacific Northwest my home. At AWS, I was a member of distributed systems team that created the log based file system that powers <a href="https://aws.amazon.com/rds/aurora/">Amazon Aurora</a>.
+
+After the successful launch of Aurora, I was feeling restless so a friend and I co-founded my first startup <a href="http://www.dopl.com">dopl inc.</a> in order to bring the power of machine learning to bar and restaurant recommendations in the second half of 2015.
