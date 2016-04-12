@@ -7,25 +7,16 @@
 </h2>
 <hr>
 
+{% for proj in projects %}
 <div class="row">
-
   <div class ="col-sm-2 col-md-2 col-lg-2">
-    <img src="img/dillonhicksioflavicon.jpg" class="img-responsive" alt="Breakout">
+    <img src="{{proj.image}}" class="img-responsive" alt="{{proj.name}}">
   </div>
   <div class="col-sm-12 col-md-10 col-lg-10">
-    <p><a href="https://github.com/vengefuldrx/dillonhicks.io">DillonHicks.io</a> - April 2016 - I got bored one day and induldged my vanity...</p>
+    <p><a href="{{proj.link}}">{{proj.name}}</a> - {{proj.date}}- {{proj.description}}</p>
   </div>
 </div>
-
 <br/>
-<div class="row">
-
-  <div class ="col-sm-2 col-md-2 col-lg-2">
-    <img src="img/breakout.png" class="img-responsive" alt="Breakout">
-  </div>
-  <div class="col-sm-12 col-md-10 col-lg-10">
-    <p><a href="projects_breakout.html">Breakout</a> - April 2016 - Curiosity quickly overtook vanity so I made a game javascript (es6).</p>
-  </div>
-</div>
+{% endfor %}
 
 {% endblock %}

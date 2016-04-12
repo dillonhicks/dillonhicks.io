@@ -7,15 +7,15 @@
 {% block content %}
 
 <h2 class="intro-text text-center">
- <strong>Breakout</strong> - The 4 hour edition
+ <strong>Breakout</strong> - Saturday Morning Edition
 </h2>
 <hr>
 
 <div class="row">
-<div class="col-sm-12 col-md-12 col-lg-12" width="640" height="480">
-<canvas id="buffer1" width="640" height="480" style="position: absolute;"></canvas>
-<canvas id="buffer2" width="640" height="480" style="position: absolute; visibility: hidden;"></canvas>
-<div id="b" width="640" height="480" style="height: 480px; width: 640px; visibility: visible;"></div>
+<div class="col-sm-12 col-md-12 col-lg-12" width="640" height="600">
+<canvas id="buffer1" width="640" height="600" style="position: absolute;"></canvas>
+<canvas id="buffer2" width="640" height="600" style="position: absolute; visibility: hidden;"></canvas>
+<div id="b" width="640" height="800" style="background-color: #dddddd; height: 600px; width: 640px; visibility: visible;"></div>
 </div>
 </div>
 
@@ -39,7 +39,6 @@
 <button  id="rightButton" style="height: 60px; width: 100px;">right</button>
 </div>
 <div class="col-sm-1 col-md-1 col-lg-1"></div>
-
 
 <script>
   var canvases = [document.getElementById("buffer1"), document.getElementById("buffer2")];
