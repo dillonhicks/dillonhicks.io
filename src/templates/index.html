@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% block head %}
+{{ super() }}
+    <script>
+
+      $(document).ready(function() {
+        jQuery.get("content/bio.txt", undefined, function(text) {
+
+        var lines = text.trim().split(/\s*[\r\n]+\s*/g);
+
+        lines.forEach(function(elem, index, arr) {
+          var $bio = $('#bio');
+          $('<p>', {
+            id : 'paragraph' + index,
+            html : elem
+          }).appendTo($bio);
+        });
+      }, "html");
+
+    }
+  );
+
+
+  </script>
+{% endblock %}
+{% block content %}
+<hr>
+<h2 class="intro-text text-center">
+  <strong>Dillon Hicks</strong> - A Brief History
+</h2>
+<hr>
+<div class="row">
+
+  <div class ="col-sm-3 col-md-3 col-lg-3">
+    <div id="carousel-example-generic" class="carousel slide">
+      <!-- Indicators -->
+      <ol class="carousel-indicators hidden-xs">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <img class="img-responsive img-border img-left" src="img/slide-1-andes.jpg" alt="">
+        </div>
+        <div class="item">
+          <img class="img-responsive img-border img-left" src="img/slide-2-desk.jpg" alt="">
+        </div>
+        <div class="item">
+          <img class="img-responsive img-border img-left" src="img/slide-3-me.jpg" alt="">
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+        <span class="icon-prev"></span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+        <span class="icon-next"></span>
+      </a>
+    </div>
+  </div>
+
+  <div class ="col-sm-12 col-md-9 col-lg-9">
+    <hr class="visible-xs">
+    <div id="bio">
+    </div>
+    <br />
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-5 col-md-5 col-sm-5" > </div>
+  <div class="col-lg-2 col-md-2 col-sm-2">
+    <p>
+      <a href="https://github.com/vengefuldrx">
+        <img src="img/just-vector-1.0/svg/github_alt.svg" width="30" height="30" border="0" alt="View Dillon Hicks's profile on Github">
+      </a>
+      <a href="https://www.facebook.com/Vengeful.Dr.X">
+        <img src="img/just-vector-1.0/svg/facebook.svg" width="30" height="30" border="0" alt="View Dillon Hicks's profile on Facebook">
+      </a>
+      <a href="https://www.linkedin.com/pub/dillon-hicks/12/5a1/980">
+        <img src="img/just-vector-1.0/svg/linkedin.svg" width="30" height="30" border="0" alt="View Dillon Hicks's profile on LinkedIn">
+      </a>
+
+    </p>
+    <div class="col-lg-5 col-md-5 col-sm-5"> </div>
+  </div>
+{% endblock %}
+
+{% block subfooter %}
+  <!-- Script to Activate the Carousel -->
+  <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    });
+
+  </script>
+{% endblock %}
