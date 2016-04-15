@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block head %}
+{{ super() }}
+{% endblock %}
+
+{% block content %}
+<hr>
+<h2 class="intro-text text-center">
+ <strong>Chat Server</strong>
+</h2>
+<hr>
+
+<div class="row">
+<div class="col-sm-12 col-md-12 col-lg-12" width="640" height="600">
+  <form id="input-form" class="form-inline">
+    <div class="form-group">
+      <input id="input-handle" type="text" class="form-control" placeholder="Enter handle" autofocus />
+    </div>
+    <div class="form-group">
+      <input id="input-text" type="text" class="form-control" placeholder="Enter chat text here!" autofocus />
+    </div>
+    <button class="btn btn-primary" type="submit">Send</button>
+  </form>
+  <div class="page-header">
+    <h1>Chat Log</h1>
+  </div>
+  <div id="chat-text">
+  </div>
+</div>
+</div>
+
+{% block subfooter %}
+<script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reconnecting-websocket/1.0.0/reconnecting-websocket.min.js"
+      crossorigin="anonymous" > </script>
+<script src="js/chatclient.js"> </script>
+
+{% endblock %}
+
+{% endblock %}

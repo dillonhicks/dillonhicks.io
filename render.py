@@ -8,8 +8,9 @@ from jinja2 import Template, FileSystemLoader, Environment
 from collections import namedtuple, defaultdict, MappingView, OrderedDict
 
 
+PhotoCredit = namedtuple('PhotoCredit', ('link', 'name'))
 Link = namedtuple('Link', ('link', 'caption'))
-Project = namedtuple('Project', ('date', 'name', 'link', 'image', 'description'))
+Project = namedtuple('Project', ('date', 'name', 'link', 'image', 'description', 'photo_credit'))
 
 excludes = set((
     'base.html',
@@ -88,20 +89,34 @@ def proj_ctx():
         name='DillonHicks.io',
         link='https://github.com/vengefuldrx/dillonhicks.io',
         image='img/dillonhicksioflavicon.jpg',
-        description='A game I developed on a Saturday morning to learn more about JavaScript.')
+        description='My own personal website to use as a portfolio and a centralized place to prototype.',
+        photo_credit=None)
 
     breakout = Project(
         date='April 2016',
         name='Breakout',
         link='proj-breakout.html',
         image='img/breakout.png',
-        description='A game I developed on a Saturday morning to learn more about JavaScript.')
+        description='A game I developed on a Saturday morning to learn more about JavaScript.',
+        photo_credit=None)
 
+    chatserver = Project(
+        date='April 2016',
+        name='Golang Chat Server',
+        link='proj-chatserver.html',
+        image='https://golang.org/doc/gopher/talks.png',
+        description='Definitely a work in progress. Dedicating some time to learning golang by making a '
+        'websocket powered chat server. This is modified version of '
+        'the heroku <a href=\"https://github.com/heroku-examples/go-websocket-chat-demo\">'
+        'websocket chat demo</a>. If the heroku dyno on which it is running sleeps then it causes the'
+        'system to fall over when it wakes up.',
+        photo_credit=PhotoCredit(link='http://golang.org', name='golang.org'))
 
     return {
         'projects' : (
             dillonio,
             breakout,
+            chatserver,
         )
     }
 

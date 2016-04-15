@@ -11,9 +11,12 @@
 <div class="row">
   <div class ="col-sm-2 col-md-2 col-lg-2">
     <img src="{{proj.image}}" class="img-responsive" alt="{{proj.name}}">
+    {% if proj.photo_credit %}
+    <a href="{{proj.photo_credit.link}}"><font size="1">Photo Credit - {{proj.photo_credit.name}}</font></a>
+    {% endif %}
   </div>
   <div class="col-sm-12 col-md-10 col-lg-10">
-    <p><a href="{{proj.link}}">{{proj.name}}</a> - {{proj.date}}- {{proj.description}}</p>
+    <p><a href="{{proj.link}}">{{proj.name}}</a> - {{proj.date}} - {{proj.description}}</p>
   </div>
 </div>
 <br/>
